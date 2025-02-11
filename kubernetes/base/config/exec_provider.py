@@ -53,7 +53,7 @@ class ExecProvider(object):
                 value = item['value']
                 additional_vars[name] = value
             self.env.update(additional_vars)
-        if exec_config.safe_get('provideClusterInfo'):
+        if exec_config.safe_get('command'):
             self.cluster = cluster
         else:
             self.cluster = None
